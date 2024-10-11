@@ -1,4 +1,6 @@
-.metadata/.plugins/org.eclipse*
+logs/*.log
+logs/*.lock
+/.metadata
 
 
 
