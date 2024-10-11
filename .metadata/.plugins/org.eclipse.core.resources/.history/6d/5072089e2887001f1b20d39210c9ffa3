@@ -1,5 +1,0 @@
-package com.ead.authuser.repositories;
-
-public class UserRepository {
-
-}
