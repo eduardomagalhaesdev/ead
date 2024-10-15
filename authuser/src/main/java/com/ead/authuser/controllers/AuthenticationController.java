@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ead.authuser.dtos.UserDto;
+import com.ead.authuser.dtos.UserDto.UserView;
 import com.ead.authuser.enums.UserStatus;
 import com.ead.authuser.enums.UserType;
 import com.ead.authuser.models.UserModel;
 import com.ead.authuser.services.UserService;
+import com.fasterxml.jackson.annotation.JsonView;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -28,7 +30,7 @@ public class AuthenticationController {
 	UserService userService;
 
 	@PostMapping("/signup")
-	public ResponseEntity<Object> registerUser(@RequestBody UserDto userDto) {
+	public ResponseEntity<Object> registerUser(@RequestBody @JsonView(UserView.RegistrationPost.class) UserDto userDto) {
 
 		if (userService.existsByUsername(userDto.getUsername())) {
 			return ResponseEntity.status(HttpStatus.CONFLICT).body("Error: Username is already exists taken!");
