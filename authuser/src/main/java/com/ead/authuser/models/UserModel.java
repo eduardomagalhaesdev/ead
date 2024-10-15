@@ -18,7 +18,6 @@ import com.ead.authuser.enums.UserType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonValueFormat;
 
 import lombok.Data;
 
@@ -42,7 +41,7 @@ public class UserModel implements Serializable{
 	
 	@Column(nullable = false, length = 255)
 	@JsonIgnore //campo oculto ao trazer informações do user
-	private String pasword;
+	private String password;
 	
 	@Column(nullable = false, length = 150)
 	private String fullName;
