@@ -10,5 +10,5 @@ import com.ead.course.services.LessonService;
 public class LessonServiceImpl implements LessonService{
 
 	@Autowired
-	LessonRepository lessonRepository;
+	private LessonRepository lessonRepository;
 }

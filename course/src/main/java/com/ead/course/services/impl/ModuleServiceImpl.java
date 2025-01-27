@@ -10,5 +10,5 @@ import com.ead.course.services.ModuleService;
 public class ModuleServiceImpl implements ModuleService {
 
 	@Autowired
-	ModuleRepository moduleRepository;
+	private ModuleRepository moduleRepository;
 }

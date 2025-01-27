@@ -10,5 +10,5 @@ import com.ead.course.services.CourseService;
 public class CourseServiceImpl implements CourseService {
 
 	@Autowired
-	CourseRepository courseRepository;
+	private CourseRepository courseRepository;
 }
